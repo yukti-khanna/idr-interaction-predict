@@ -249,3 +249,5 @@ A more portable future release should replace the single monolithic bundle with 
 - `model_metadata.json`
 
 That would make pretrained inference easier to run across environments.
+
+This project is licensed under the MIT License - see the LICENSE file for details.
