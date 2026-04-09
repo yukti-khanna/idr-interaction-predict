@@ -1,0 +1,21 @@
+input_fasta: inputs/fasta/sample.fasta
+
+pairing:
+  mode: explicit_pairs
+  pairs_file: inputs/lists/sample_pairs.txt
+  list_a: inputs/lists/idr_a.txt
+  list_b: inputs/lists/idr_b.txt
+  allow_self_pairs: false
+  keep_order: true
+
+resources:
+  residues_file: resources/residues.csv
+
+models:
+  pretrained_bundle: models/pretrained/mlp_plateau_calibrated_bundle_sel_cols.pkl
+
+outputs:
+  prepared_pairs_csv: results/prepared/pairs.csv
+  features_csv: results/features/pair_features.csv
+  predictions_csv: results/predictions/pair_predictions.csv
+  ranked_predictions_csv: results/predictions/ranked_pairs.csv
