@@ -1,0 +1,1 @@
+Authoritative server model installed locally. All five copied artifact hashes match config/accepted_model_hashes.json. No retraining or substitution occurred. See environments/ for the supplied Linux environment exports; runtime identity in that environment remains required.

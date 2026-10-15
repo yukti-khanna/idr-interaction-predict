@@ -1,0 +1,7 @@
+{
+  "MODEL_MANIFEST.json": "48b7279b7e76260c04c1f42ee766d3f385f3d27c5ad61b99b2941d0d02b0d516",
+  "base_model_ensemble.joblib": "f8ecfb6787de2a6e94f7a56f7ef19a2568dd1e10ff197cfacbab0e54f8f66532",
+  "predict_final_hybrid.py": "e2ae4ccf45adb414f7f3b8e6ac1678407b43f8e6459b6ed9eff17d575495bd44",
+  "residual_nn.keras": "97b087300defc35479c693d430d62e0f31c2a35d8e1a5059b412f1c028ac02ea",
+  "residual_preprocessor.joblib": "505b312091e1692561ed33ccd2a2a82df6100d733ae5108b2f042d75ea1f964c"
+}

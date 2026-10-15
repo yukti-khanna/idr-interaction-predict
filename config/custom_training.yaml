@@ -1,0 +1,8 @@
+custom_training:
+  data: inputs/custom_training.csv
+  output: models/custom/my_model_v1
+  target_column: target
+  target_description: "REPLACE_WITH_TARGET_UNITS_CORRECTION_AND_TRANSFORMATION"
+  mode: base
+  split_unit: sequence
+  residual_epochs: 400

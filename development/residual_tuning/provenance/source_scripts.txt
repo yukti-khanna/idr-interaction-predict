@@ -1,0 +1,7 @@
+Prepared from the completed Figure 5 training-only analyses before packaging.
+
+The historical residual architecture was inspected from the manuscript project source before packaging.
+
+The package is self-contained for execution: it includes the merged 917-pair F2-P8 input table in inputs/fig5_917_F2_P8.csv.
+
+Packaged input was created by merging the authoritative 917-pair Figure 5 base table with the historical patch table by name using one-to-one validation. The original source tables are not required to run this package.

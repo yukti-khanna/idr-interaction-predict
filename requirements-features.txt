@@ -1,0 +1,4 @@
+numpy
+pandas
+scipy
+# Optional: numba (same historical functions run without JIT if absent)

@@ -1,0 +1,156 @@
+{
+  "model_name": "final Figure 5 hybrid model",
+  "training_scope": "917 development simulations only",
+  "heldout_test_dataset_opened_or_used": false,
+  "target": "B22_corr1_log10",
+  "pair_id_column": "name",
+  "minus_NCP_feature": "Opposite_Charge_Number",
+  "feature_order": [
+    "Opposite_Charge_Number",
+    "mean_lambda_RGG",
+    "mean_lambda_TAD",
+    "SHD_RGG",
+    "SHD_TAD",
+    "opp_charge_std",
+    "scd_patch1_std",
+    "scd_patch2_std",
+    "rg_fraction_patch1_std",
+    "aromatic_fraction_patch2_std",
+    "shd_patch1_std",
+    "shd_patch2_std",
+    "ah_energy_std"
+  ],
+  "base_model": {
+    "class": "sklearn.neural_network.MLPRegressor ensemble",
+    "scaler": "StandardScaler fitted on all 917 development rows for final deployment",
+    "parameters": {
+      "class": "sklearn.neural_network.MLPRegressor",
+      "activation": "tanh",
+      "alpha": 0.01,
+      "hidden_layer_sizes": [
+        128,
+        64,
+        32,
+        16
+      ],
+      "learning_rate_init": 0.01,
+      "solver": "adam",
+      "max_iter": 500,
+      "ensemble_random_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "base_training_rows": 917,
+    "base_ensemble_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "base_n_models": 5
+  },
+  "residual_model": {
+    "architecture": [
+      "Dense(16,tanh,L2=5e-4)",
+      "Dense(8,tanh,L2=5e-4)",
+      "Dense(1,linear)"
+    ],
+    "optimizer": "Adam learning_rate=2e-4",
+    "loss": "Huber delta=0.75",
+    "residual_training_rows": 93,
+    "residual_training_high_threshold": 40.0,
+    "residual_sample_weight": "sigmoid gate on \u2212NCP",
+    "final_residual_seed": 20260916,
+    "final_training_epoch_count": 400,
+    "epoch_choice_rule": "median best_epoch across the 25 validated nested historical_fixed_nn runs from inner_tuning_results.csv",
+    "nested_best_epoch_summary": {
+      "min": 27,
+      "median": 400.0,
+      "max": 400
+    },
+    "final_training_loss_last": 0.01062894519418478
+  },
+  "lambda_raw": 0.1368029406764465,
+  "lambda_final": 0.1368029406764465,
+  "residual_cap": 0.16914558161466975,
+  "cap_percentile": 85,
+  "gate_center": 40.0,
+  "gate_scale": 12.0,
+  "high_minus_NCP_threshold": 40.0,
+  "prediction_formula": "base + lambda_final * sigmoid((\u2212NCP-gate_center)/gate_scale) * clip(raw_residual, -cap, cap)",
+  "development_oof_metrics": {
+    "all_base": {
+      "n": 917,
+      "R2": 0.9510665993469231,
+      "RMSE": 0.07442386234870829,
+      "MAE": 0.055867967890577575,
+      "Pearson": 0.9753228810160748,
+      "Spearman": 0.9678040155026642,
+      "bias": -0.0007281499067030847
+    },
+    "all_hybrid": {
+      "n": 917,
+      "R2": 0.9511760313995845,
+      "RMSE": 0.07434059698788362,
+      "MAE": 0.05595918491943271,
+      "Pearson": 0.9753494028911553,
+      "Spearman": 0.9678004984230878,
+      "bias": -0.001000562458009602
+    },
+    "high_base": {
+      "n": 93,
+      "R2": 0.8138672542101261,
+      "RMSE": 0.12099992930055685,
+      "MAE": 0.09062778836723866,
+      "Pearson": 0.9063466693003259,
+      "Spearman": 0.888096445943123,
+      "bias": 0.01150212344595713
+    },
+    "high_hybrid": {
+      "n": 93,
+      "R2": 0.8158697260995844,
+      "RMSE": 0.12034729247819612,
+      "MAE": 0.09119605752851173,
+      "Pearson": 0.906525266488534,
+      "Spearman": 0.886902808033183,
+      "bias": 0.008121379572769424
+    },
+    "all_changes": {
+      "R2": 0.00010943205266145117,
+      "RMSE": -8.326536082467473e-05,
+      "MAE": 9.12170288551381e-05,
+      "bias": -0.00027241255130651734
+    },
+    "high_changes": {
+      "R2": 0.002002471889458346,
+      "RMSE": -0.0006526368223607332,
+      "MAE": 0.0005682691612730745,
+      "bias": -0.0033807438731877065
+    }
+  },
+  "software_versions": {
+    "python": "3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]",
+    "platform": "Linux-6.12.95+deb12-amd64-x86_64-with-glibc2.36",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.7.2",
+    "scipy": "1.15.3",
+    "tensorflow": "2.20.0"
+  },
+  "authoritative_sources": {
+    "input_917": "/home/gpfs/o_khanna/fig5/fig5_residual_tuning_local/inputs/fig5_917_F2_P8.csv",
+    "residual_package": "/home/gpfs/o_khanna/fig5/fig5_residual_tuning_local",
+    "nested_script": "/home/gpfs/o_khanna/fig5/fig5_residual_tuning_local/scripts/run_nested_residual_tuning.py",
+    "utils": "/home/gpfs/o_khanna/fig5/fig5_residual_tuning_local/scripts/utils.py",
+    "base_config": "/home/gpfs/o_khanna/fig5/fig5_residual_tuning_local/config/base_model.json",
+    "run_config": "/home/gpfs/o_khanna/fig5/fig5_residual_tuning_local/config/run_config.json",
+    "grid_config": "/home/gpfs/o_khanna/fig5/fig5_residual_tuning_local/config/residual_grid.json",
+    "oof_predictions": "/home/gpfs/o_khanna/fig5/fig5_residual_tuning_local/outputs/outer_oof_predictions.csv",
+    "inner_tuning": "/home/gpfs/o_khanna/fig5/fig5_residual_tuning_local/outputs/inner_tuning_results.csv"
+  }
+}

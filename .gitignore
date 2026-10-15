@@ -2,3 +2,12 @@ results/
 .snakemake/
 __pycache__/
 .DS_Store
+
+__pycache__/
+*.pyc
+.DS_Store
+.snakemake/
+results/runs/
+results/features/
+results/prepared/
+results/predictions/

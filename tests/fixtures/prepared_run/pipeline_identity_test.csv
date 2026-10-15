@@ -1,0 +1,14 @@
+quantity,n,max_absolute_difference,tolerance,passed
+minus_NCP,20,0.0,1e-10,True
+mean_lambda_RGG,20,9.992007221626409e-16,1e-10,True
+mean_lambda_AHD,20,9.43689570931383e-16,1e-10,True
+SHD_RGG,20,4.440892098500626e-15,1e-10,True
+SHD_AHD,20,4.6629367034256575e-15,1e-10,True
+local_charge_complementarity_std,20,4.440892098500626e-16,1e-10,True
+scd_RGG_patch_std,20,5.551115123125783e-17,1e-10,True
+scd_AHD_patch_std,20,5.551115123125783e-17,1e-10,True
+rg_fraction_RGG_patch_std,20,8.326672684688674e-17,1e-10,True
+aromatic_fraction_AHD_patch_std,20,8.326672684688674e-17,1e-10,True
+shd_RGG_patch_std,20,8.326672684688674e-17,1e-10,True
+shd_AHD_patch_std,20,8.326672684688674e-17,1e-10,True
+ah_energy_patch_std,20,8.326672684688674e-17,1e-10,True

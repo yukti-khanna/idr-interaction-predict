@@ -1,0 +1,29 @@
+{
+  "upstream_sources_relative_to_fig5": {
+    "fig5_final_model_validation_local/scripts/historical_patch_get_features.py": "451f331e0e778686e01c2a880e4f8f8d8ac6528210d9487135d88bdeeb52389d",
+    "fig5_final_model_validation_local/scripts/energy_funcs.py": "3dab4d6d55a7542ede8dda261393df9edddddc602d5c900a0fe949682b4f51da",
+    "s8_extended_controls/scripts/run_new_s8_control_predictions.py": "fa43d3c112306abd5d0771b2cd6a21ddeb80ed3f96b4d872a65e8c1f93dc131a",
+    "fig5_final_model_validation_local/inputs/histidine/metadata/residues.csv": "fb8851e7889ad5efc9f2f54da574617775a70297e9e92645deaf26d8747c8f73",
+    "patches/features/all_tads_rggs_dis.fasta": "373cf3468fcc4f7ab5fdd10ff74778b2de6f605011e0bfd68381b725e4a59928",
+    "fig5_residual_tuning_local/inputs/fig5_917_F2_P8.csv": "55344a83e7717b4b74c4c4d2478d6008b5990b61f09225df9462241c891f5e01",
+    "outputs/final_hybrid_model/final_predictions/development_917_frozen_model_predictions.csv": "8cf355d9c534e38f91fa22f0c875aa3fbab08754017b8ff0b52e91bb84565299"
+  },
+  "identity_selection": "First 10 development rows below 40 and first 10 at least 40 with nonzero correction; in-sample frozen predictions, not OOF. No held-out rows.",
+  "vendor_policy": "Original function bodies retained verbatim; CLI/I/O bootstrap omitted, optional no-JIT fallback added. Historical files unchanged.",
+  "bundled_files": {
+    "scripts/vendor/historical_features.py": "7a3dab7e111918e0729ddfaaed22ae3b70c133a26c1300043294e1d17d9a2011",
+    "scripts/vendor/energy_funcs.py": "2810a4032a9e9df48166bca41ecedb24ec0ee3509002f5c0261a74a3ac19ecee",
+    "scripts/vendor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/vendor/accepted_predictor.py": "a5523ca58a71a4ed447560dbec430dec1352ef46e109bbcc1607e9ed634cf146",
+    "resources/residues.csv": "fb8851e7889ad5efc9f2f54da574617775a70297e9e92645deaf26d8747c8f73",
+    "resources/identity_reference.csv": "5c6250730b397d47aaf9d563f3655a8d7712edfdf4d76fb1549ec40f74f18dce",
+    "resources/development_feature_ranges.csv": "8583172f416424db917d3ef86883f570a69b30b3158d1bbbc7cd5aeab5d3c2a3",
+    "resources/global_residues.csv": "2cf55bc77a7ff8a25b7cc841ac947ff5c6ec33a8fdc3a5e575044152c7d0bbc7"
+  },
+  "external_read_only_source": {
+    "path": "/Users/yuktikhanna/calvados/residues.csv",
+    "sha256": "2cf55bc77a7ff8a25b7cc841ac947ff5c6ec33a8fdc3a5e575044152c7d0bbc7",
+    "bundled_as": "resources/global_residues.csv",
+    "purpose": "Exact authoritative development global mean lambda and SHD. Patch features use resources/residues.csv, a different historical table."
+  }
+}

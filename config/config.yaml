@@ -12,7 +12,7 @@ resources:
   residues_file: resources/residues.csv
 
 models:
-  pretrained_bundle: models/pretrained/mlp_plateau_calibrated_bundle_sel_cols.pkl
+  final_manifest: models/final_frozen/MODEL_MANIFEST.json
 
 outputs:
   prepared_pairs_csv: results/prepared/pairs.csv

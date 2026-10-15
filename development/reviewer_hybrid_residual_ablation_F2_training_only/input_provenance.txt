@@ -1,0 +1,7 @@
+Input provenance for F2 hybrid residual ablation.
+Input CSV: /Users/yuktikhanna/rtads-rgg-interactions/fig5/sim_pairs_pred_with_hybrid_sel_cols_with_old.csv
+Input SHA256: f9ddb700b12bf0aeab3ccb88cebfd12d29d61be0a4b21411f06f6a4da7b6dc5c
+Rows expected: 917; rows used: 917
+Feature set: Opposite_Charge_Number, mean_lambda_RGG, mean_lambda_TAD, SHD_RGG, SHD_TAD.
+mean_lambda_RGG=lambda_RGG/RGG_length; mean_lambda_TAD=lambda_TAD/TAD_length.
+No held-out matrix or unsimulated prediction landscape was used.

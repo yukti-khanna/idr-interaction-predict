@@ -1,0 +1,7 @@
+{
+  "MODEL_MANIFEST.json": true,
+  "base_model_ensemble.joblib": true,
+  "predict_final_hybrid.py": true,
+  "residual_nn.keras": true,
+  "residual_preprocessor.joblib": true
+}
