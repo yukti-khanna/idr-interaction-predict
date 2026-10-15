@@ -1,0 +1,6 @@
+917-pair training-only F2 patch extension. Input global: /Users/yuktikhanna/rtads-rgg-interactions/fig5/sim_pairs_pred_with_hybrid_sel_cols_with_old.csv
+Input frozen patch table: /Users/yuktikhanna/rtads-rgg-interactions/fig5/patches/datasets/features_sim_pairs_for_training.csv
+No held-out matrix accessed. Historical orientation: patch1=RGG, patch2=TAD.
+Exact existing pipeline repeats=[42, 43, 44, 45, 46], ensemble seeds=[0, 1, 2, 3, 4], shared fold assignments=/Users/yuktikhanna/rtads-rgg-interactions/fig5/reviewer_reduced_model_ablation_training_only/cv_fold_assignments.csv.
+Identifier audit before fitting: base IDs = 917; patch IDs = 917; intersection size = 917; base-only IDs = 0; patch-only IDs = 0; base names unique = True; patch names unique = True.
+Patch descriptors were merged by name with one-to-one validation. Historical patch table columns were used only for local patch-derived descriptors; authoritative global F2 descriptors came from the Figure 5 base table.

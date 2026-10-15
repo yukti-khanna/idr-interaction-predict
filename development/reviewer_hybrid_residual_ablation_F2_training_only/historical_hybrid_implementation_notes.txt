@@ -1,0 +1,21 @@
+Historical script inspected read-only: /Users/yuktikhanna/idr-interaction-predict/scripts/mlp_with_plateau_residual_calibrated.py
+1. Historical residual targets appear to be in-sample where base predictions are obtained from a model fitted to the same training data, rather than nested OOF residuals.
+2. Residual-fit and calibration observations appear partially overlapping: plateau residuals are fit first and then a tail subset is used for calibration.
+3. The historical five-model ensemble propagation is fragile: the script contains paths that pass ensemble predictions/scaler while base_mlp can be None, which can trigger a single-model fallback/guard.
+4. Plateau threshold appears to be chosen by quantile logic in the historical implementation rather than as a fully external nested-CV parameter.
+5. Historical gate center: 40.
+6. Historical gate scale: 12.
+7. Historical lambda bound: [0, 0.6].
+8. Historical cap definition: percentile cap on absolute calibration residuals, with 85th percentile used in the prior workflow.
+9. Historical feature set included the prior larger selected-feature model, not the final F2 parsimonious model.
+10. Redundant electrostatic variables in that larger set included OCN/Normalized_OCN and individual charge-related descriptors already audited in Task 1.
+
+Search evidence:
+40: present
+12: present
+0.6: present
+percentile: present
+quantile: present
+base_mlp: present
+Normalized_OCN: present
+Opposite_Charge_Number: present

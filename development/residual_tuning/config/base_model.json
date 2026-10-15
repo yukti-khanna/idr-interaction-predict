@@ -1,0 +1,31 @@
+{
+  "name": "F2-P8",
+  "target": "B22_corr1_log10",
+  "features": [
+    "Opposite_Charge_Number",
+    "mean_lambda_RGG",
+    "mean_lambda_TAD",
+    "SHD_RGG",
+    "SHD_TAD",
+    "opp_charge_std",
+    "scd_patch1_std",
+    "scd_patch2_std",
+    "rg_fraction_patch1_std",
+    "aromatic_fraction_patch2_std",
+    "shd_patch1_std",
+    "shd_patch2_std",
+    "ah_energy_std"
+  ],
+  "scaler": "StandardScaler fitted inside each training fold only",
+  "mlp": {
+    "class": "sklearn.neural_network.MLPRegressor",
+    "activation": "tanh",
+    "alpha": 0.01,
+    "hidden_layer_sizes": [128, 64, 32, 16],
+    "learning_rate_init": 0.01,
+    "solver": "adam",
+    "max_iter": 500,
+    "ensemble_random_seeds": [0, 1, 2, 3, 4]
+  },
+  "fixed": true
+}

@@ -1,0 +1,14 @@
+name: fig5_residual
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - joblib
+  - pip
+  - pip:
+      - "tensorflow>=2.11,<2.16"

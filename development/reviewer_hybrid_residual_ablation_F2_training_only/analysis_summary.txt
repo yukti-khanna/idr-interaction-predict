@@ -1,0 +1,18 @@
+F2 hybrid residual ablation, training-only nested OOF
+
+Only input table used: /Users/yuktikhanna/rtads-rgg-interactions/fig5/sim_pairs_pred_with_hybrid_sel_cols_with_old.csv
+Rows used: 917
+The sealed 1,794-pair held-out matrix and unsimulated landscape were not opened, read, hashed, or used.
+
+High-OCN inner-OOF residual mean by fold ranged from 0.0084 to 0.0244; low-OCN residual mean ranged from -0.0028 to 0.0018.
+Unconstrained lambdas by fold: -0.0435, 0.1584, -0.4934, -0.1117, 0.2077.
+Constrained lambda_hat by fold: 0.0000, 0.1584, 0.0000, 0.0000, 0.2077.
+Pooled outer-OOF hybrid minus base: delta R2 0.0002, delta Pearson 0.0001, delta RMSE -0.0001, delta MAE -0.0001.
+OCN >= 40 hybrid minus base: delta R2 0.0022, delta RMSE -0.0006, delta MAE -0.0007.
+OCN < 40 hybrid minus base: delta R2 -0.0000, delta RMSE 0.0000, delta MAE -0.0000.
+Fold-wise delta R2 values: 0.0000, -0.0000, 0.0000, 0.0000, 0.0008.
+
+Sensitivity tables report gate-center, gate-scale, lambda-bound, and cap-percentile variants. These were treated as robustness checks and were not used to choose a best setting.
+
+Conservative interpretation:
+Retain the residual correction only if the nested OOF results show consistent high-OCN improvement without degrading the rest of the panel. If lambda_hat collapses toward zero, pooled gains are near zero, or fold-wise improvements are inconsistent, the historical correction is not justified after simplifying the base model to F2 and should be removed from the revised Figure 5 predictor.

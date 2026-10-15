@@ -1,0 +1,1 @@
+Known preparation fixture copied unchanged numerically from the validated preparation_cli_smoke run. Only resource-path metadata and the adapter hash were updated for repository relocation. No predictions regenerated.

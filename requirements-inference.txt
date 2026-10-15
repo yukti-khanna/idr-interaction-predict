@@ -1,0 +1,7 @@
+-r requirements-features.txt
+joblib
+scikit-learn
+tensorflow
+# Use the existing SERVER environment that loads the accepted artifacts.
+# Do not upgrade an established environment just to satisfy this list.
+# The mandatory hashes and numerical identity check validate deployment.

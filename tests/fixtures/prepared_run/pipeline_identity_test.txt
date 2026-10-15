@@ -1,0 +1,19 @@
+Known-row identity test
+rows=20; ordinary=10; high_negative_net_charge_product=10
+feature_identity_passed=True
+prediction_identity=NOT RUN (feature-only preparation)
+rtol=0 for all comparisons; feature/base/gate atol=1e-10; TensorFlow raw atol=1e-7; applied/final atol=1e-8.
+Backend allowance is explicit: accepted S8 CPU runs previously differed by 4.89e-8 raw and 1.62e-9 final. No model changes are allowed.
+minus_NCP: max_diff=0; tolerance=1e-10; passed=True
+mean_lambda_RGG: max_diff=9.9920072216264089e-16; tolerance=1e-10; passed=True
+mean_lambda_AHD: max_diff=9.4368957093138306e-16; tolerance=1e-10; passed=True
+SHD_RGG: max_diff=4.4408920985006262e-15; tolerance=1e-10; passed=True
+SHD_AHD: max_diff=4.6629367034256575e-15; tolerance=1e-10; passed=True
+local_charge_complementarity_std: max_diff=4.4408920985006262e-16; tolerance=1e-10; passed=True
+scd_RGG_patch_std: max_diff=5.5511151231257827e-17; tolerance=1e-10; passed=True
+scd_AHD_patch_std: max_diff=5.5511151231257827e-17; tolerance=1e-10; passed=True
+rg_fraction_RGG_patch_std: max_diff=8.3266726846886741e-17; tolerance=1e-10; passed=True
+aromatic_fraction_AHD_patch_std: max_diff=8.3266726846886741e-17; tolerance=1e-10; passed=True
+shd_RGG_patch_std: max_diff=8.3266726846886741e-17; tolerance=1e-10; passed=True
+shd_AHD_patch_std: max_diff=8.3266726846886741e-17; tolerance=1e-10; passed=True
+ah_energy_patch_std: max_diff=8.3266726846886741e-17; tolerance=1e-10; passed=True

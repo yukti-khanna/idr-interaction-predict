@@ -1,0 +1,37 @@
+{
+  "public_order": [
+    "minus_NCP",
+    "mean_lambda_RGG",
+    "mean_lambda_AHD",
+    "SHD_RGG",
+    "SHD_AHD",
+    "local_charge_complementarity_std",
+    "scd_RGG_patch_std",
+    "scd_AHD_patch_std",
+    "rg_fraction_RGG_patch_std",
+    "aromatic_fraction_AHD_patch_std",
+    "shd_RGG_patch_std",
+    "shd_AHD_patch_std",
+    "ah_energy_patch_std"
+  ],
+  "internal_order": [
+    "Opposite_Charge_Number",
+    "mean_lambda_RGG",
+    "mean_lambda_TAD",
+    "SHD_RGG",
+    "SHD_TAD",
+    "opp_charge_std",
+    "scd_patch1_std",
+    "scd_patch2_std",
+    "rg_fraction_patch1_std",
+    "aromatic_fraction_patch2_std",
+    "shd_patch1_std",
+    "shd_patch2_std",
+    "ah_energy_std"
+  ],
+  "expected_manifest_sha256": "48b7279b7e76260c04c1f42ee766d3f385f3d27c5ad61b99b2941d0d02b0d516",
+  "target": "log10(-B22)",
+  "patch_size": 5,
+  "patch_step": 1,
+  "ddof": 0
+}

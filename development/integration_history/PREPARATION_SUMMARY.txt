@@ -1,0 +1,31 @@
+Server-clone inference preparation completed.
+
+New package: prediction_pipeline/
+Executable: prediction_pipeline/predict_pairs.py
+Wrapper: prediction_pipeline/run_predictions.sh
+Run first from the server fig5 root:
+python prediction_pipeline/predict_pairs.py --identity-only --run-name server_identity
+Then:
+python prediction_pipeline/predict_pairs.py --pairs my_pairs.tsv --run-name experiment_01
+
+Default model: outputs/final_hybrid_model/frozen_model/ relative to fig5.
+Expected manifest: 48b7279b7e76260c04c1f42ee766d3f385f3d27c5ad61b99b2941d0d02b0d516
+Local observed manifest: fdb9ad1c7d2e0cc80edbac563960957b553c16aff46780656d047d30d7b7a6e9
+Do not copy the local model over the authoritative server artifacts.
+
+Feature identity PASSED for 20 development rows, all 13 features.
+Maximum feature discrepancy: 4.6629367034256575e-15.
+Prediction identity NOT RUN; pending authoritative server environment.
+Seven tests passed; one optional server inference test skipped.
+CLI preparation passed, including execution from a different working directory.
+Historical canonical function bodies verified unchanged.
+No local Keras model loaded, inspected, converted or run.
+No model fitting, calibration, simulations, figure edits or historical input edits.
+
+Important: the frozen development representation used the original residue table
+for four global hydropathy features and the patch table for patch descriptors.
+Both fixed tables are bundled with hashes. Older accepted S8 control exports used
+the patch table for their global hydropathy values; the read-only 10-row discrepancy
+audit is validation/historical_S8_feature_convention_audit.csv. This pipeline
+reproduces training descriptors and does not revise those historical control outputs.
+See README.md for modes, examples, schemas, tolerances and provenance details.

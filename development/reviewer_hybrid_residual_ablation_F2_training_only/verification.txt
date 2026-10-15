@@ -1,0 +1,10 @@
+Verification
+Only the 917-pair simulation table was used: /Users/yuktikhanna/rtads-rgg-interactions/fig5/sim_pairs_pred_with_hybrid_sel_cols_with_old.csv
+The 1,794-pair held-out file was never opened/read/hashed by this script.
+Unsimulated predictions were not used.
+Outer test folds were isolated from scaling, base training, residual fitting, threshold use, lambda calibration, and cap selection.
+All observations received exactly one outer-OOF base prediction and one outer-OOF hybrid prediction: True
+Residual-fit and calibration subsets were disjoint: True
+The runner wrote only within the requested output directory and did not modify any existing Figure 5 files.
+The audit detected a pre-existing repository modification in patches/outputs/fig5_patch_context_extended_complete/cv_fold_metrics.partial.csv; this file was not touched by the runner and is reported separately from the analysis outputs.
+No unexpected new files were created outside the output directory by this run.

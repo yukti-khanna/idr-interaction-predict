@@ -1,0 +1,22 @@
+PACKAGE VALIDATION OVERALL: PASS
+PASS	scripts compile	python -m py_compile passed
+PASS	dry-run works	DRY RUN PASS, including launch from outside package directory
+PASS	required input exists inside package	residual_tuning/inputs/fig5_917_F2_P8.csv
+PASS	no external input files required to run	inputs/fig5_917_F2_P8.csv is packaged
+PASS	target exists	B22_corr1_log10
+PASS	all F2-P8 features exist	
+PASS	917 rows	917
+PASS	unique pair names	917
+PASS	no 1,794 held-out data file included	residual_tuning/inputs/fig5_917_F2_P8.csv
+PASS	no missing feature values	
+PASS	no hardcoded local home/project paths	
+PASS	run_all changes to package directory	
+PASS	configuration grid loads	
+PASS	output paths are writable	
+PASS	resume logic initializes	
+PASS	historical fixed NN comparison included	
+PASS	Ridge benchmark comparison included	
+PASS	outer folds deterministic	
+PASS	threshold fixed at 40	
+PASS	gate fixed at center 40 scale 12	
+PASS	lambda and cap fixed	
